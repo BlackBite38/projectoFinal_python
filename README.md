@@ -1,6 +1,6 @@
 # projectoFinal_pythonPro
 
-sera un juego de seleccionar la alternativa correcta de entre 4, las preguntas seran de de [matematicas]* y un 
-personaje reaccionara a la respuesta (feliz si se hizo bien, triste si mal), ademas de que saldra la respuesta corecta y una explicacion del porque/como
+aplicacion de hacer cuestionarios de preguntas de alternativas, las preguntas son de [matematicas]* y un 
+personaje reaccionara al resultado final (feliz si se hizo bien, triste si mal), ademas de que saldran las respuestas corectas al final
 
-*puede cambiar despues
+*se pueden cambiar
