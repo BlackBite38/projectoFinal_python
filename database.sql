@@ -160,6 +160,3 @@ VALUES
     '2',
     "7x(5-3)=7x2=14"
 );
-
-INSERT INTO quizzes (title)
-VALUES ('Matematicas Basicas 3');
