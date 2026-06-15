@@ -2,3 +2,5 @@ Se recomienda borrar el archivo database.db si se desea hacer algun cambio a los
 ya que el archivo create_db.py causa que se añadan cuestionarios nuevos al database.db actual,
 lo que significa que si un cuestionario ya existe, se añadiran otro cuestionario con el mismo nombre el cual no funciona y tambien 
 preguntas repetidas en el cuestionario original
+
+Se debe crear un entorno virtual (en la terminal usar  "python -m venv venv")
