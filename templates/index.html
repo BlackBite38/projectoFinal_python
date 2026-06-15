@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<div class="quiz-container">
+
+    {% for quiz in quizzes %}
+
+        <div class="quiz-card">
+
+            <h2>{{ quiz.title }}</h2>
+
+            <a href="/quiz/{{ quiz.id }}">
+                Comenzar
+            </a>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

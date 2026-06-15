@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="result-box">
+
+    <h2>Resultado</h2>
+
+    <p class="score-text">
+        Puntaje: {{ score }}/{{ total }}
+    </p>
+    
+    <img
+    src="{{ url_for('static', filename='img/' + result_image) }}"
+    alt="Resultado"
+    class="result-image">
+
+    <audio id="resultAudio" autoplay>
+    <source
+        src="{{ url_for('static', filename='audio/' + result_sound) }}"
+        type="audio/mpeg">
+    </audio>
+</div>
+
+<div class="result-buttons">
+    <button onclick="toggleAnswers()">
+        Ver respuestas correctas
+    </button>
+
+    <a href="/">
+        Volver
+    </a>
+
+</div>
+<div id="answers" style="display:none;">
+
+    {% for item in review_data %}
+
+        <hr>
+
+        <h3>{{ item.question }}</h3>
+
+        <p>
+            <strong>Respuesta correcta:</strong>
+        </p>
+
+        {% if item.correct == 1 %}
+            {{ item.option1 }}
+        {% elif item.correct == 2 %}
+            {{ item.option2 }}
+        {% elif item.correct == 3 %}
+            {{ item.option3 }}
+        {% else %}
+            {{ item.option4 }}
+        {% endif %}
+
+        <p>
+            <strong>Explicación:</strong>
+            {{ item.explanation }}
+        </p>
+
+    {% endfor %}
+
+</div>
+<script>
+function toggleAnswers() {
+
+    const answers =
+        document.getElementById("answers");
+
+    if (answers.style.display === "none") {
+        answers.style.display = "block";
+    }
+    else {
+        answers.style.display = "none";
+    }
+}
+</script>
+{% endblock %}
