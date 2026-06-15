@@ -37,14 +37,14 @@ INSERT INTO questions
 )
 VALUES
 (
-    1,
-    'Cuanto es 5 + 3?',
-    '6',
-    '7',
-    '8',
-    '9',
-    '3',
-    "5+3=8"
+    1, --quiz_id
+    'Cuanto es 5 + 3?', --question
+    '6', --option1
+    '7', --option2
+    '8', --option3
+    '9', --option4
+    '3', --correct_option
+    "5+3=8" --explanation
 ),
 
 (
